@@ -23,7 +23,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -yy -qq --force-yes install clang-3.8 lldb-3.8
 	
-RUN ln -s /usr/bin/clang-3.8 /usr/bin/clang	&& ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
+RUN ln -f -s /usr/bin/clang-3.8 /usr/bin/clang	&& ln -f -s /usr/bin/clang++-3.8 /usr/bin/clang++
 
 # Install osxcross
 # NOTE: The Docker Hub's build machines run varying types of CPUs, so an image
